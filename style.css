@@ -8,6 +8,7 @@
   --line-color: rgb(123, 204, 255);
   --rectangle-color: rgb(43, 181, 255);
   --radius: 50%;
+  --shadow: rgb(116, 201, 244);
 }
 
 body {
@@ -38,7 +39,7 @@ body {
   height: var(--blue-line);
   border: 10px solid var(--line-color);
   
-  box-shadow: 0 0 20px white;
+  box-shadow: 0 0 20px var(--shadow);
 }
 
 .hidden {
@@ -75,7 +76,7 @@ body {
     border-radius: 10px;
     border: 1px solid rgb(70, 122, 255);
     /* animation: spin 2s linear infinite; */
-    box-shadow: 0 0 20px white, 0 0 20px white;
+    box-shadow: 0 0 20px var(--shadow), 0 0 20px var(--shadow);
 }
 .reactor-center-part{
     position: absolute;
@@ -84,7 +85,7 @@ body {
     background-color: rgb(183, 222, 255);
     border-radius: 50%;
     /* animation: spin 2s linear infinite; */
-    box-shadow: 0 0 20px white;
+    box-shadow: 0 0 20px var(--shadow);
 }
 .rotate2{
     /* animation: spin 2s linear infinite; */
