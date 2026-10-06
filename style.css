@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --line-color: rgb(123, 204, 255);
+  --rectangle-color: rgb(43, 181, 255);
+  --radius: 50%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.center-position {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.reactor-container {
+  width: 900px;
+  height: 900px;
+  position: relative;
+  /* background-color: aliceblue; */
+}
+
+.blue-line {
+  border-radius: 50%;
+  width: var(--blue-line);
+  height: var(--blue-line);
+  border: 10px solid var(--line-color);
+  
+  box-shadow: 0 0 20px white;
+}
+
+.hidden {
+  position: relative;
+  border-radius: 50%;
+  width: var(--hidden);
+  height: var(--hidden);
+  /* border: 1px solid blue; */
+
+  transform-origin: center center;
+  animation: var(--rotate) 10s linear infinite;
+  
+}
+
+.box {
+  position: absolute;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  /* left: 50%; */
+  width: var(--box-w);
+  height: var(--box-h);
+  /* background-color: aliceblue; */
+  transform: translate(-50%, -50%) rotate(calc(var(--box-deg) * var(--b)));
+   /* animation: spin 2s linear infinite;/ */
+}
+.rectangle{
+ 
+    display: flex;
+    
+    width: 50px;
+    height: 50%;
+    background-color: var(--rectangle-color);
+    border-radius: 10px;
+    border: 1px solid rgb(70, 122, 255);
+    /* animation: spin 2s linear infinite; */
+    box-shadow: 0 0 20px white, 0 0 20px white;
+}
+.reactor-center-part{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(183, 222, 255);
+    border-radius: 50%;
+    /* animation: spin 2s linear infinite; */
+    box-shadow: 0 0 20px white;
+}
+.rotate2{
+    /* animation: spin 2s linear infinite; */
+}
+.rotate3{
+    /* animation: spin 2s linear infinite; */
+}
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}  
+@keyframes spin2 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+} 
